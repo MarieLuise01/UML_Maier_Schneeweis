@@ -67,6 +67,10 @@ public class HTL {
 		
 		System.out.println(HTL.getName() );
 		
+		System.out.println("Abteilungen: ");
+		System.out.println(el.getName() +" "+el.getKuerzel());
+		System.out.println(inf.getName()+" "+inf.getKuerzel());
+		
 		System.out.println("hat "+HTL.getAnzahlSchueler()+" Schüler");
 		
 		

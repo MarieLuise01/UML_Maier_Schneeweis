@@ -26,11 +26,11 @@ public class Abteilung {
 			Abteilungsvorstand = null;
 		}
 		
-		String getName() {
+		public String getName() {
 			return name;
 		}
 		
-		String getKuerzel() {
+		public String getKuerzel() {
 			return kuerzel;
 		}
 		
