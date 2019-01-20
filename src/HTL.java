@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Iterator;
 public class HTL {
 
 	public static void main(String[] args) {
@@ -26,6 +27,8 @@ public class HTL {
 		w211.belegen(Unterrichtstag.DIENSTAG,1,vier_A,l , GGP);
 		
 		w211.showbelegungen();
+		
+		
 		
 	}
 

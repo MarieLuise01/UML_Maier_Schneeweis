@@ -1,3 +1,5 @@
+import java.util.HashSet;
+import java.util.Set;
 
 public class Klasse {
 	
@@ -12,6 +14,7 @@ public class Klasse {
 		
 
 		public
+		Set<Schüler> Klschülerliste = new HashSet<>();
 		
 		Klasse(String Bezeichnung, int Schulstufe, Raum Raum) {
 			this.bezeichnung = Bezeichnung;
@@ -49,9 +52,13 @@ public class Klasse {
 			return Klassensprecher;
 		}
 		
-		boolean addSchüler() {
-			return Schüler;
+		boolean addSchüler(Schüler schüler) {
 					
+					i++;
+					if(i >= 35){
+					return false;
+					}
+					Klschülerliste.add(schüler);
 		}
 		
 		

@@ -58,7 +58,7 @@ public class Person {
 		
 		
 		Person(){}
-		Person (Long svnr, String vorname, String nachname,Date geburtsdatum, String email){
+		Person (Long svnr, String vorname, String nachname, Date geburtsdatum, String email){
 			
 			this.svnr = svnr;
 			this.vorname = vorname;

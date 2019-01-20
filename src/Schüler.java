@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.HashSet;
 
 
 public class Schüler extends Person{
@@ -7,8 +8,13 @@ public class Schüler extends Person{
 		int katalognummer;
 		boolean eigenberechtigt;
 		Date eintrittsdatum;
-
+	protected	
+		static int schüleranzahl;
 	public
+		HashSet<Schüler> Schülerliste = new HashSet<>();
+	
+	public
+	
 	
 	//getters
 	
@@ -39,16 +45,16 @@ public class Schüler extends Person{
 			this.eintrittsdatum = eintrittsdatum;
 		}
 	
-		Schüler(){}
+		Schüler(){schüleranzahl++;}
 		
-		Schüler(Long svnr, String vorname, String nachname,Date geburtsdatum,
-				String email, int katalognummer, boolean eigenberechtigt,Date eintrittsdatum ){
-			super(svnr,vorname,nachname,geburtsdatum,email);
+		Schüler(long svnr, String vorname, String nachname, Date geburtsdatum,
+				String email, int katalognummer, boolean eigenberechtigt,Date eintrittsdatum){
+			super(svnr, vorname, nachname, geburtsdatum, email);
 			
 			this.katalognummer = katalognummer;
 			this.eigenberechtigt = eigenberechtigt;
 			this.eintrittsdatum = eintrittsdatum;
-			
+			schüleranzahl++;
 		}
 		
 		
