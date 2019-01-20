@@ -15,7 +15,8 @@ public class Raum {
 	ArrayList<Fach> unterrichtListe;
 	
 	Belegung belegen;
-	ArrayList<Belegung> belegungen;
+	
+	ArrayList<Belegung> belegungen = new ArrayList();
 	public
 
 	
@@ -61,7 +62,9 @@ public class Raum {
 	}
 	
 	void belegen(Unterrichtstag tag, int unterrichtseinheit, Klasse klasse, Lehrer lehrer, Fach fach) {
-		belegungen.add(new Belegung(tag,unterrichtseinheit,klasse,lehrer,fach));
+		Belegung b = new Belegung(tag,unterrichtseinheit,klasse,lehrer,fach); 
+		
+		//belegungen.add(b);
 	}
 	
 	
@@ -72,7 +75,9 @@ public class Raum {
 		size = belegungen.size();
 		System.out.println("size = "+size);
 		for(int i = 0; i<size;i++) {
-			belegungen.get(i).showBelegung(belegungen.get(i));
+			belegungen.get(i).showBelegung();
+			
+			
 		}
 		
 		

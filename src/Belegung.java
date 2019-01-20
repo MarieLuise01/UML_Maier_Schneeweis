@@ -5,7 +5,7 @@ public class Belegung {
 	
 		int unterrichtsEinheit; 		//"Stunde"
 		Unterrichtstag Tag;
-		Raum raum;
+		//Raum raum;
 		Klasse klasse;
 		Lehrer lehrer;
 		Fach fach;
@@ -24,7 +24,7 @@ public class Belegung {
 		System.out.println("Raum wurde belegt");
 	}*/
 	
-	void showBelegung(Belegung b) {
+	void showBelegung() {
 		System.out.println(this.Tag);
 		System.out.println(this.unterrichtsEinheit);
 		System.out.println(this.klasse);
