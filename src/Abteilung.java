@@ -53,8 +53,10 @@ public class Abteilung {
 			if(Schule.direktor == l) {
 				return false;
 			}
+			else {
 			this.av = l;
 			return true;
+			}
 		}
 		
 		public Lehrer getAbteilungsvorstand() {

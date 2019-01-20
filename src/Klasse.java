@@ -63,7 +63,7 @@ public class Klasse {
 		}
 		
 		Schüler getKlassensprecher(Klasse klasse) {
-			
+			return this.klassensprecher;
 		}
 		
 		int i;

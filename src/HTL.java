@@ -4,34 +4,14 @@ import java.util.Iterator;
 public class HTL {
 
 	public static void main(String[] args) {
-		/*
-		Person p1 = new Person (124L,"Peter","Müller",new  Date ((2000-1900),1,17),"pm.at");
-		Schüler s1 = new Schüler(12L,"Hubert","Huber",new Date((2000-1900),5,18),"dre.email",15,true,new Date((2000-1900),4,23));
+
+		Schule HTL = new Schule("HTL STP", 1234L, "BHS");
 		
+		Abteilung el = new Abteilung("Elektronik","EL");
+		Abteilung inf = new Abteilung("Informatik","IF");
 		
-		Lehrer anzahl = new Lehrer();
-		Adresse a = new Adresse("Waldstrasse", 3, 3101, "St.Pölten");
-		
-		
-		Raum w211= new Raum("W211",22,Raumtyp.KLASSENRAUM); 
-		
-		Fach GGP = new Fach("GGP",2,Raumtyp.KLASSENRAUM,w211);
-	
-		
-		
-		
-		Lehrer l = new Lehrer(1L,"MArtin","Walter", new Date((1977-1900),4,2),"ww.at","WALT",null);
-		
-		Klasse vier_A = new Klasse("4a",4,w211);
-		w211.setStammklasseVon(vier_A);
-		
-		w211.belegen(Unterrichtstag.DIENSTAG,1,vier_A,l , GGP);
-		
-		w211.showbelegungen();
-		*/
-		Schule HTL = new Schule("HTL", 1234L, "BHS");
-		HTL.addAbteilung("ELektronik", "EL");
-		HTL.addAbteilung("Informatik", "IF");
+		HTL.addAbteilung(el);
+		HTL.addAbteilung(inf);
 		HTL.Standort = new Adresse("Waldstraße", 3, 3103, "St.Pölten");
 		
 		Raum V111= new Raum("V111",22,Raumtyp.LABORRAUM); 
@@ -62,14 +42,14 @@ public class HTL {
 		Lehrer Wagner = new Lehrer(345678L, "Herbert", "Wagner", LocalDate.of(1980,04,12), "email", "CRHA", FSST);
 		Lehrer Peham = new Lehrer(456789L, "Christoph", "Peham", LocalDate.of(1985,03,01), "email", "CRHA", GGP);
 		
-		Abteilung.setAbteilungsvorstand(Peham);
+		
 		
 		
 		NichtLehrpersonal Christina = new NichtLehrpersonal(012345L, "Christina", "Winter", LocalDate.of(1995, 12, 05), "email", 1);
 		NichtLehrpersonal Hans = new NichtLehrpersonal(012345L, "Hans", "Lang", LocalDate.of(1995, 12, 05), "email", 1);
 		NichtLehrpersonal Peter = new NichtLehrpersonal(012345L, "Peter", "Böswarth", LocalDate.of(1995, 12, 05), "email", 1);
 		NichtLehrpersonal Franz = new NichtLehrpersonal(012345L, "Franz", "Peter", LocalDate.of(1995, 12, 05), "email", 1);
-		NichtLehrpersonal Susi = new NichtLehrpersonal(012345L, "Christina", "Winter", LocalDate.of(1995, 12, 05), "email", 1);
+		NichtLehrpersonal Susi = new NichtLehrpersonal(012345L, "Susanne", "Winter", LocalDate.of(1995, 12, 05), "email", 1);
 		
 		 Schüler Dominik = new Schüler(0123456L, "Dominik", "Tesch", LocalDate.of(1999, 02, 07),17, "email", 20, true, LocalDate.of(2015, 9, 03));		
 		 Schüler Marie = new Schüler(0123456L, "Marie", "Maier", LocalDate.of(2001, 03, 01), 18, "email", 12, true, LocalDate.of(2015, 9, 03));
@@ -85,7 +65,19 @@ public class HTL {
 		
 		
 		
+		System.out.println(HTL.getName() );
 		
+		System.out.println("hat "+HTL.getAnzahlSchueler()+" Schüler");
+		
+		
+		
+		W213.belegen(Unterrichtstag.MONTAG , 1 , AHELS4 , Crha,DIC );
+		
+		System.out.println(" ");
+		W213.showbelegungen();
+		
+		
+		;
 		
 	}
 

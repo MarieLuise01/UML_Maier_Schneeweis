@@ -29,11 +29,11 @@ public class Schule {
 	{
 		return Personalliste.add(personal);
 	}
-	public Abteilung addAbteilung(String name, String kuerzel)
+	public void addAbteilung(Abteilung abt)
 	{
-		Abteilung neueAbteilung = new Abteilung(name, kuerzel);
-		Abteilungsliste.add(neueAbteilung);
-		return neueAbteilung;
+		
+		Abteilungsliste.add(abt);
+		
 	}
 	
 	//setters

@@ -24,7 +24,7 @@ public class Belegung {
 	
 	void showBelegung() {
 		System.out.println(Tag);
-		System.out.println(unterrichtsEinheit);
+		System.out.println(unterrichtsEinheit+". Stunde");
 		System.out.println(klasse.bezeichnung);
 		System.out.println(lehrer.vorname +" "+ lehrer.nachname);
 		System.out.println(fach.name);
