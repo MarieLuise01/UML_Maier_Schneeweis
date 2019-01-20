@@ -5,7 +5,7 @@ public class Belegung {
 	
 		int unterrichtsEinheit; 		//"Stunde"
 		Unterrichtstag Tag;
-		//Raum raum;
+		
 		Klasse klasse;
 		Lehrer lehrer;
 		Fach fach;
@@ -20,15 +20,13 @@ public class Belegung {
 			this.fach = fach;
 	}
 	
-	/*void Raumbelegen(Unterrichtstag tag, int unterrichtseinheit, Raum raum, Klasse klasse, Lehrer lehrer, Fach fach) {
-		System.out.println("Raum wurde belegt");
-	}*/
+
 	
 	void showBelegung() {
-		System.out.println(this.Tag);
-		System.out.println(this.unterrichtsEinheit);
-		System.out.println(this.klasse);
-		System.out.println(this.lehrer);
-		System.out.println(this.fach);
+		System.out.println(Tag);
+		System.out.println(unterrichtsEinheit);
+		System.out.println(klasse.bezeichnung);
+		System.out.println(lehrer.vorname +" "+ lehrer.nachname);
+		System.out.println(fach.name);
 	}
 }

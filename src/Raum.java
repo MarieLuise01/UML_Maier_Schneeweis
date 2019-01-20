@@ -64,7 +64,7 @@ public class Raum {
 	void belegen(Unterrichtstag tag, int unterrichtseinheit, Klasse klasse, Lehrer lehrer, Fach fach) {
 		Belegung b = new Belegung(tag,unterrichtseinheit,klasse,lehrer,fach); 
 		
-		//belegungen.add(b);
+		belegungen.add(b);
 	}
 	
 	
@@ -73,7 +73,7 @@ public class Raum {
 	void showbelegungen() {
 		int size;
 		size = belegungen.size();
-		System.out.println("size = "+size);
+		System.out.println(size+"Belegung(en)");
 		for(int i = 0; i<size;i++) {
 			belegungen.get(i).showBelegung();
 			
