@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Mitarbeiter extends Person{
 	
@@ -15,7 +15,7 @@ public class Mitarbeiter extends Person{
 			anzahl++;
 		}
 		
-		Mitarbeiter(Long svnr, String vorname, String nachname,Date geburtsdatum, String email){
+		Mitarbeiter(Long svnr, String vorname, String nachname,LocalDate geburtsdatum, String email){
 			super(svnr,vorname,nachname,geburtsdatum,email);
 		
 			anzahl++;

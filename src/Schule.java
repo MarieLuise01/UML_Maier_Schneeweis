@@ -8,15 +8,23 @@ public class Schule {
 		String name;
 		Long schulkennzahl;
 		String schultyp;
-		
-		Adresse Standort;
+	
 		Schüler Schulsprecher;
 		Lehrer direktor;
+		public
+		Adresse Standort;
 		
 		HashSet<NichtLehrpersonal> Personalliste = new HashSet<>();
 		HashSet<Abteilung> Abteilungsliste = new HashSet<>();
 		HashSet<Schüler> Schülerliste = new HashSet<>();
 	
+	Schule(){}
+	Schule(String name, Long schulkennzahl,String schultyp){
+		this.name = name;
+		this.schulkennzahl = schulkennzahl;
+		this.schultyp = schultyp;
+	}
+		
 	boolean addPersonal(NichtLehrpersonal personal)
 	{
 		return Personalliste.add(personal);

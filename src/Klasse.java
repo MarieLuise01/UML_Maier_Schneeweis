@@ -1,20 +1,19 @@
 import java.util.HashSet;
-import java.util.Set;
+
 
 public class Klasse {
 	
 	
-	protected
-		
 		String bezeichnung = "";
 		int schulstufe;
+		Schüler klassensprecher;
 		
 		Raum raum;
 		Fach lernt;
 		
 
 		public
-		Set<Schüler> Klschülerliste = new HashSet<>();
+		HashSet<Schüler> Klschülerliste = new HashSet<>();
 		
 		Klasse(String Bezeichnung, int Schulstufe, Raum Raum) {
 			this.bezeichnung = Bezeichnung;
@@ -30,40 +29,57 @@ public class Klasse {
 			return schulstufe;
 		}
 		
+		void setSchulstufe(int s) {
+			this.schulstufe = s;
+		}
 		
 		Fach getLernt() {
 			return lernt;
 		}
+		
+		//setters
 
 		void setLernt(Fach lernt) {
 			this.lernt = lernt;
 		}
 
 	
-		/*
-		float getDurchschnittsalter() {
+
+		/*float getDurchschnittsalter() {
+			int alt = 0;
+			for(Schüler schliste : Klschülerliste) {
+				alt = ;
+			}
 			return Durchschnittsalter;
 		}
+		*/	
 		
-		
-		
-		
-		boolean setKlassensprecher() {
-			return Klassensprecher;
+		boolean setKlassensprecher(Schüler schüler) {
+			if(klassensprecher == schüler) {
+				return false;
+			}
+			klassensprecher = schüler;
+			return true;
 		}
 		
+		Schüler getKlassensprecher(Klasse klasse) {
+			
+		}
+		
+		int i;
 		boolean addSchüler(Schüler schüler) {
 					
 					i++;
-					if(i >= 35){
+					if( i >= 35){
 					return false;
 					}
 					Klschülerliste.add(schüler);
+					return true;
+					
 		}
 		
 		
 		void exportStundenplan() {
 			
 		}
-	*/
 }

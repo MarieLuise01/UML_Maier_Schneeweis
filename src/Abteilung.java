@@ -9,9 +9,12 @@ public class Abteilung {
 			String kuerzel;
 			String name;
 			Lehrer av;
-		protected Schule Schule;
-		public HashSet<Schüler> Abtschülerliste = new HashSet<>();
-			
+			Schüler Abteilungssprecher;
+			Lehrer Abteilungsvorstand;
+			protected Schule Schule;
+		
+		public 
+		HashSet<Schüler> Abtschülerliste = new HashSet<>();	
 		HashSet<Klasse> klasse = new HashSet<>();
 		HashSet<Lehrer> Lehrerliste = new HashSet<>();
 		
@@ -19,6 +22,8 @@ public class Abteilung {
 		Abteilung(String n, String k) {
 			name = n;
 			kuerzel = k;
+			Abteilungssprecher = null; 
+			Abteilungsvorstand = null;
 		}
 		
 		String getName() {
@@ -43,13 +48,17 @@ public class Abteilung {
 		}
 		
 		
-		boolean setAbteilungsvorstand(Lehrer l)
+		public boolean setAbteilungsvorstand(Lehrer l)
 		{
 			if(Schule.direktor == l) {
 				return false;
 			}
 			this.av = l;
 			return true;
+		}
+		
+		public Lehrer getAbteilungsvorstand() {
+			return Abteilungsvorstand;
 		}
 		
 		

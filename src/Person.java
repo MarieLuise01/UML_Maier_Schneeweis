@@ -1,4 +1,5 @@
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Person {
 
@@ -7,7 +8,7 @@ public class Person {
 		String vorname = "";
 		String nachname = "";
 	
-		Date geburtsdatum ;
+		LocalDate geburtsdatum ;
 	
 		String email = "";
 	
@@ -27,7 +28,7 @@ public class Person {
 			return nachname;
 		}
 		
-		Date getGeburtsdatum() {
+		LocalDate getGeburtsdatum() {
 			return geburtsdatum;
 		}
 		
@@ -48,7 +49,7 @@ public class Person {
 			this.nachname = nachname;
 		}
 
-		void setGeburtsdatum(Date geburtsdatum) {
+		void setGeburtsdatum(LocalDate geburtsdatum) {
 			this.geburtsdatum = geburtsdatum;
 		}
 
@@ -58,7 +59,7 @@ public class Person {
 		
 		
 		Person(){}
-		Person (Long svnr, String vorname, String nachname, Date geburtsdatum, String email){
+		Person (Long svnr, String vorname, String nachname, LocalDate geburtsdatum, String email){
 			
 			this.svnr = svnr;
 			this.vorname = vorname;

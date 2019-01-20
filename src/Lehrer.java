@@ -1,13 +1,15 @@
 import java.util.Date;
+import java.util.HashSet;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Lehrer extends Mitarbeiter{
 	private 
-		String kürzel = "";
+		String kürzel;
 		Schule direktor;
 		Abteilung av;
 	
-		ArrayList<Fach> unterrichtet;
+		HashSet<Fach> unterrichtet = new HashSet<Fach>();
 	
 	public 
 		String getKürzel() {
@@ -19,18 +21,20 @@ public class Lehrer extends Mitarbeiter{
 		}
 	
 			Lehrer(){}
-			Lehrer(Long svnr, String vorname, String nachname,Date geburtsdatum, String email,String kürzel, ArrayList<Fach> unterrichtet){
+			
+			Lehrer(Long svnr, String vorname, String nachname,LocalDate geburtsdatum, String email,String kürzel, Fach unter){
 				super(svnr,vorname,nachname,geburtsdatum,email);		//Person
 				
 				this.kürzel = kürzel;
-				this.unterrichtet= unterrichtet;
+				unterrichtet = new HashSet<Fach>();
+				unterrichtet.add(unter);
 	}
 
-			ArrayList<Fach> getUnterrichtet() {
+			HashSet<Fach> getUnterrichtet() {
 				return unterrichtet;
 			}
 
-			void setUnterrichtet(ArrayList<Fach> unterrichtet) {
+			void setUnterrichtet(HashSet<Fach> unterrichtet) {
 				this.unterrichtet = unterrichtet;
 			}
 			

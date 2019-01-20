@@ -1,13 +1,15 @@
-import java.util.Date;
+import java.time.LocalDate;
+
 import java.util.HashSet;
 
 
 public class Schüler extends Person{
 	
 	private
+		int alter;
 		int katalognummer;
 		boolean eigenberechtigt;
-		Date eintrittsdatum;
+		LocalDate eintrittsdatum;
 	protected	
 		static int schüleranzahl;
 	public
@@ -27,7 +29,7 @@ public class Schüler extends Person{
 			return eigenberechtigt;
 		}
 
-		Date getEintrittsdatum() {
+		LocalDate getEintrittsdatum() {
 			return eintrittsdatum;
 		}
 		
@@ -41,14 +43,14 @@ public class Schüler extends Person{
 			this.eigenberechtigt = eigenberechtigt;
 		}
 		
-		void setEintrittsdatum(Date eintrittsdatum) {
+		void setEintrittsdatum(LocalDate eintrittsdatum) {
 			this.eintrittsdatum = eintrittsdatum;
 		}
 	
 		Schüler(){schüleranzahl++;}
 		
-		Schüler(long svnr, String vorname, String nachname, Date geburtsdatum,
-				String email, int katalognummer, boolean eigenberechtigt,Date eintrittsdatum){
+		Schüler(long svnr, String vorname, String nachname, LocalDate geburtsdatum, int alter,
+				String email, int katalognummer, boolean eigenberechtigt,LocalDate eintrittsdatum){
 			super(svnr, vorname, nachname, geburtsdatum, email);
 			
 			this.katalognummer = katalognummer;
