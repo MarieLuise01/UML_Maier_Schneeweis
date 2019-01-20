@@ -1,9 +1,12 @@
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Lehrer extends Mitarbeiter{
 	private 
 		String kürzel = "";
-
+		
+		ArrayList<Fach> unterrichtet;
+	
 	public 
 		String getKürzel() {
 			return kürzel;
@@ -14,13 +17,23 @@ public class Lehrer extends Mitarbeiter{
 		}
 	
 			Lehrer(){}
-			Lehrer(Long svnr, String vorname, String nachname,Date geburtsdatum, String email,String kürzel){
+			Lehrer(Long svnr, String vorname, String nachname,Date geburtsdatum, String email,String kürzel, ArrayList<Fach> unterrichtet){
 				
 				super(svnr,vorname,nachname,geburtsdatum,email);		//Person
 				
 				this.kürzel = kürzel;
-		
+				this.unterrichtet= unterrichtet;
 	}
+
+			ArrayList<Fach> getUnterrichtet() {
+				return unterrichtet;
+			}
+
+			void setUnterrichtet(ArrayList<Fach> unterrichtet) {
+				this.unterrichtet = unterrichtet;
+			}
+			
+		
 		
 
 }

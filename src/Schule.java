@@ -1,7 +1,7 @@
 
 public class Schule {
 	private 
-		String name;
+		String name=" ";
 		Long schulkennzahl;
 		String schultyp;
 		
